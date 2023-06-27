@@ -19,3 +19,39 @@
   transition: all 0.2s ease-in-out 0s;
 }
 ```
+.carousel-item {
+  position: relative;
+  display: none;
+  width: 100%;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  opacity: 1;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  position: absolute;
+}
+
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+  transform: translateX(0);
+}
+
+.carousel-item-next.carousel-item-end,
+.carousel-item-prev.carousel-item-start {
+  transform: translateX(0);
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  transform: translateX(0);
+}
